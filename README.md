@@ -1,4 +1,4 @@
-# Student LMS - University Resource Platform
+# Student LMS - Study Resource Platform
 
 A full-stack Learning Management System built for university students to share academic resources, find tutors, and collaborate through community posts.
 
