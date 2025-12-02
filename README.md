@@ -78,13 +78,12 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
-# Create .env file with your credentials
-# SUPABASE_URL=your_supabase_url
-# SUPABASE_SERVICE_KEY=your_service_key
-# JWT_SECRET_KEY=your_jwt_secret
+# Copy and configure environment variables
+cp .env.example .env
+# Edit .env with your Supabase credentials
 
-# Run server
-uvicorn main:app --reload --port 5000
+# Run server (use port 8000 - port 5000 conflicts with AirPlay on macOS)
+uvicorn main:app --reload --port 8000
 ```
 
 ### Frontend Setup
@@ -93,8 +92,9 @@ uvicorn main:app --reload --port 5000
 cd frontend
 npm install
 
-# Create .env file
-# VITE_API_URL=http://localhost:5000/api
+# Copy and configure environment variables
+cp .env.example .env
+# Edit .env with your Supabase credentials
 
 # Run dev server
 npm run dev
